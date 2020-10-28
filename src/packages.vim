@@ -15,6 +15,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'mengelbrecht/lightline-bufferline'     " buffer status in tabs
   Plug 'jiangmiao/auto-pairs'                  " automatically complete pairs
   Plug 'machakann/vim-sandwich'                " surrounding symbol manipulation
+  Plug 'vimwiki/vimwiki'                       " wiki style note taking
 
   " we could use coc if node is installed
 
@@ -56,7 +57,3 @@ let g:lightline.active.right     = [['lineinfo'], ['percent'],['fileformat', 'fi
 
 """ [plugin] vim-riprep
 let g:rg_highlight = 1
-
-""" [plugin] auto-pairs
-let g:AutoPairsFlyMode = 1        " will jump to end of pair from anywhere in the middle with completion
-
