@@ -4,6 +4,7 @@
 " Description: Modular entrypoint to my NeoVim config
 
 source $HOME/.config/nvim/packages.vim
+source $HOME/.config/nvim/functions.vim
 source $HOME/.config/nvim/general.vim
 source $HOME/.config/nvim/look.vim
 source $HOME/.config/nvim/feel.vim
