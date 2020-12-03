@@ -25,7 +25,9 @@ set textwidth=120
 set colorcolumn=100
 
 """ file type specific settings
-au FileType gitcommit set tw=72
+au FileType gitcommit setlocal tw=72
+au FileType markdown setlocal tw=80
+au FileType vimwiki setlocal tw=80
 au FileType ruby setlocal ts=2 sts=2 sw=2
 au FileType python setlocal ts=4 sts=4 sw=4
 au FileType javascript setlocal ts=2 sts=2 sw=2
