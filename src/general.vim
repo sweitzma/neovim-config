@@ -1,4 +1,5 @@
 """ basic settings
+set nocp                          " no-op in Nvim
 set ignorecase smartcase          " search case-insensitively unless uppercase characters are used
 set hidden                        " allow unsaved buffers to be hidden
 set visualbell                    " visual bell = no sounds
@@ -26,11 +27,8 @@ set colorcolumn=100
 
 """ file type specific settings
 au FileType gitcommit setlocal tw=72
-au FileType markdown setlocal tw=80
-au FileType vimwiki setlocal tw=80
+au FileType markdown setlocal tw=80 conceallevel=2
 au FileType ruby setlocal ts=2 sts=2 sw=2
 au FileType python setlocal ts=4 sts=4 sw=4
 au FileType javascript setlocal ts=2 sts=2 sw=2
-au FileType markdown setlocal conceallevel=0
 au FileType tex setlocal conceallevel=0 tw=100
-

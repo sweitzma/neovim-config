@@ -2,26 +2,32 @@
 call plug#begin('~/.config/nvim/plugged')
   Plug 'sweitzma/vim-colors-meh'               " minimal colorscheme
   Plug 'sheerun/vim-polyglot'                  " lazy loading many syntax types
-  Plug 'easymotion/vim-easymotion'             " easy motions
   Plug 'tpope/vim-commentary'                  " comment/uncomment with gcc
   Plug 'junegunn/fzf.vim'                      " fzf bindings and functions
   Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
-  Plug 'kana/vim-arpeggio'                     " map chord key press
   Plug 'tpope/vim-repeat'                      " add easy plugin support to vim repeats
-  Plug 'jremmen/vim-ripgrep'                   " use ripgrep within vim
   Plug 'tpope/vim-fugitive'                    " git funtionality
-  Plug 'w0rp/ale'                              " linter
   Plug 'itchyny/lightline.vim'                 " better status bar
   Plug 'mengelbrecht/lightline-bufferline'     " buffer status in tabs
   Plug 'jiangmiao/auto-pairs'                  " automatically complete pairs
   Plug 'machakann/vim-sandwich'                " surrounding symbol manipulation
-  Plug 'vimwiki/vimwiki'                       " wiki style note taking
+  Plug 'tpope/vim-speeddating'                 " better date incrementing
 
-  " we could use coc if node is installed
+  " Staging
+  Plug 'itchyny/calendar.vim'                  " calendar app
+  Plug 'godlygeek/tabular'
+  Plug 'plasticboy/vim-markdown'
 
-  " tmux integration
-  " hardmode
-  
+  " Do I use these?
+  Plug 'w0rp/ale'                              " linter
+  Plug 'jremmen/vim-ripgrep'                   " use ripgrep within vim
+  Plug 'kana/vim-arpeggio'                     " map chord key press
+  Plug 'easymotion/vim-easymotion'             " easy motions
+  Plug 'junegunn/goyo.vim'                     " distraction-free writing in Vim
+
+  " Plugin ideas
+  "  - tmux integration
+  "  - hardmode
 call plug#end()
 
 """ [plugin] Easymotion
@@ -57,3 +63,10 @@ let g:lightline.active.right     = [['lineinfo'], ['percent'],['fileformat', 'fi
 
 """ [plugin] vim-riprep
 let g:rg_highlight = 1
+
+""" [plugin] calendar.vim
+let g:calendar_clock_12hour = 1
+let g:calendar_date_month_name = 1
+
+""" [plugin] vim-markdown
+let g:vim_markdown_folding_disabled = 1
