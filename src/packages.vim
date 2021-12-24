@@ -12,14 +12,19 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'jiangmiao/auto-pairs'                  " automatically complete pairs
   Plug 'machakann/vim-sandwich'                " surrounding symbol manipulation
   Plug 'tpope/vim-speeddating'                 " better date incrementing
+  Plug 'godlygeek/tabular'                     " needed for vim-markdown
+  Plug 'plasticboy/vim-markdown'               " markdown sytax and concealing
 
   " Staging
   Plug 'itchyny/calendar.vim'                  " calendar app
-  Plug 'godlygeek/tabular'
-  Plug 'plasticboy/vim-markdown'
+  Plug 'nvim-lua/plenary.nvim'                 " needed for telescope
+  Plug 'nvim-telescope/telescope.nvim'         " fuzzy finder over lists
+  Plug 'nvim-treesitter/nvim-treesitter'       " code parsing
+        \ , {'do': ':TSUpdate'} 
+
 
   " Do I use these?
-  Plug 'w0rp/ale'                              " linter
+  " Plug 'w0rp/ale'                              " linter
   Plug 'jremmen/vim-ripgrep'                   " use ripgrep within vim
   Plug 'kana/vim-arpeggio'                     " map chord key press
   Plug 'easymotion/vim-easymotion'             " easy motions
