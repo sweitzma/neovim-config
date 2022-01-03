@@ -21,6 +21,7 @@ call plug#begin('~/.config/nvim/plugged')
   Plug 'nvim-telescope/telescope.nvim'         " fuzzy finder over lists
   Plug 'nvim-treesitter/nvim-treesitter'       " code parsing
         \ , {'do': ':TSUpdate'} 
+  Plug 'takac/vim-hardtime'                    " break slow habits in Vim
 
 
   " Do I use these?
@@ -33,6 +34,7 @@ call plug#begin('~/.config/nvim/plugged')
   " Plugin ideas
   "  - tmux integration
   "  - hardmode
+  "  - telescope https://github.com/nvim-telescope/telescope.nvim
 call plug#end()
 
 """ [plugin] Easymotion
@@ -46,7 +48,7 @@ let g:ale_linters = {
   \'javascript': ['eslint'],
   \'javascript.jsx': ['eslint'],
 \}
-let g:ale_set_highlights = 0
+let g:ale_set_highlights = 1
 
 """ [plugin] Lightline
 set laststatus=2
@@ -75,3 +77,10 @@ let g:calendar_date_month_name = 1
 
 """ [plugin] vim-markdown
 let g:vim_markdown_folding_disabled = 1
+let g:vim_markdown_auto_insert_bullets = 1 " note this may cause issues
+let g:vim_markdown_new_list_item_indent = 0
+
+""" [plugin] vim-hardtime
+let g:hardtime_default_on = 1
+let g:hardtime_maxcount = 4
+let g:hardtime_timeout = 1000
