@@ -2,8 +2,10 @@
 
 nnoremap ; :
 nnoremap ' ;
-nnoremap j gj
-nnoremap k gk
+
+"" Testing removing these to make line jumping more accurate
+" nnoremap j gj
+" nnoremap k gk
 
 " Modify visual yank to write result to file
 vnoremap y :yank<CR>gv:w! ~/.vim/.copy<CR>
